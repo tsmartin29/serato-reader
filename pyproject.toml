@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serato-reader"
+version = "0.1.0"
+description = "Read-only reader for Serato DJ libraries: database V2, crates, smart crates, cues, loops, colours, beat grids"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Tommy Martin" }]
+keywords = ["serato", "dj", "library", "crates", "cue points", "beatgrid"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = []
+
+[project.scripts]
+serato-reader = "serato_reader.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tsmartin29/serato-reader"
+
+[tool.setuptools.packages.find]
+where = ["src"]
